@@ -4,6 +4,6 @@ export class FincaDb {
     direccion   :string;
     propietario :string;
     avaluo      :number;
-    cuarteles?:[{keyFinca :String}];
-    gastos ?:[{fecha :String,motivo :string,importe :number}];
+   // cuarteles?:[{keyFinca :String}];
+  //  gastos ?:[{fecha :String,motivo :string,importe :number}];
 }

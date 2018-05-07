@@ -1,3 +1,53 @@
-<p>
-  finca works!
-</p>
+<div class="card mt-5">
+  <div class="card-body">
+    <form #productForm="ngForm" (ngSubmit)="onSubmit(fincaForm)">      
+      <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="servFinca.fincaSelect.$key">
+      <div class="form-group">
+          <input type="text"
+              class="form-control"
+              name="nombre"
+              #nombre="ngModel"
+              [(ngModel)]="servFinca.fincaSelect.nombre"
+              placeholder="Agrega nombre del producto"
+          >
+        </div>
+        <div class="form-group">
+            <input type="text"
+              class="form-control"
+              name="direccion"
+              #direccion="ngModel"
+              [(ngModel)]="servFinca.fincaSelect.direccion"
+              placeholder="Agrega a la direccion"
+            >
+        </div>        
+        <div class="form-group">
+              <input type="text"
+                class="form-control"
+                name="propietario"
+                #propietario="ngModel"
+                [(ngModel)]="servFinca.fincaSelect.propietario"
+                placeholder="Agrega propietario"
+              >
+        </div>
+        <div class="form-group">
+          <input type="number"
+                    class="form-control"
+                    name="avaluo"
+                    #avaluo="ngModel"
+                    [(ngModel)]="servFinca.fincaSelect.avaluo"
+                    placeholder="Agrega el precio del inmueble"
+            >
+        </div>
+        <div class="form-Group">
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-plus-circle"></i>Add Finca
+          </button>  
+          <button class="btn btn-secondary" type="reset" (click)="resetForm(fincaForm)">
+            <i class="fas fa-sync-alt"></i>Limpia Finca
+          </button>  
+        </div>
+    </form>
+
+  </div>
+</div>
+
