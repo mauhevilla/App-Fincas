@@ -7,11 +7,25 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { FincasComponent } from './vistas/fincas/fincas.component';
+import { FincaListComponent } from './vistas/fincas/finca-list/finca-list.component';
+import { FincaComponent } from './vistas/fincas/finca/finca.component';
+import { CuartelesComponent } from './vistas/cuarteles/cuarteles.component';
+import { CuartelComponent } from './vistas/cuarteles/cuartel/cuartel.component';
+import { CuartelListaComponent } from './vistas/cuarteles/cuartel-lista/cuartel-lista.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FincasComponent,
+    FincaListComponent,
+    FincaComponent,
+    CuartelesComponent,
+    CuartelComponent,
+    CuartelListaComponent,
+
   ],
   imports: [
     BrowserModule,
