@@ -1,3 +1,23 @@
-<p>
-  finca-list works!
-</p>
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">Lista de Fincas</h6 >
+        <table class="table table-sm  table-hover">
+            <body>
+              <tr *ngFor ="let finca of fincaList">
+                <td>{{finca.nombre}}</td>
+                <td>{{finca.direccion}}</td>               
+                <td>{{finca.avaluo}}</td>               
+             
+                <td>
+                  <a class="btn btn-secondary text-white "  (click)="onEdit(finca)" >
+                      <i class="far fa-edit"></i>
+                  </a>
+                  <a class="btn btn-danger text-white " (click)="onDelete(finca.$key)">
+                    <i class="fas fa-trash-alt"></i>
+                </a>  
+                </td>
+              </tr> 
+            </body>
+        </table>    
+  </div>
+</div>
